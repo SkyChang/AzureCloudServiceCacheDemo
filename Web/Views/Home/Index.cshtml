@@ -1,0 +1,45 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<h1>@ViewBag.id</h1>
+    <div>
+    Session:
+    @if(Session["Test"] == null)
+    {
+        @:Session is null <br />
+    }else
+    {
+        @Session["Test"]; <br />
+    }
+    ViewData:
+    @if (ViewData["Test"] == null)
+    { 
+        @:ViewData is null <br />
+    }
+    else
+    { 
+        @ViewData["Test"]; <br />
+    }
+    ViewBag
+    @if (ViewBag.Test == null)
+    { 
+        @:ViewBag is null <br />
+    }
+    else
+    { 
+        @ViewBag.Test;<br />
+    }
+    
+    @Html.ActionLink("Next", "Index2", "Home");
+    </div>
+</body>
+</html>

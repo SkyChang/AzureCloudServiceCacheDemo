@@ -1,0 +1,35 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index2</title>
+</head>
+<body>
+    <h1>@ViewBag.id</h1>
+    <div>
+    Session:
+    @if(Session["Test"] == null)
+    {
+        @:Session is null <br />
+    }else
+    {
+        @Session["Test"]; <br />
+        //Session.Clear();
+    }
+    TempData:
+    @if (TempData["Test"] == null)
+    {
+        @:TempData is null <br />
+    }
+    else
+    {
+        @TempData["Test"]; <br />
+    }
+    </div>
+</body>
+</html>
